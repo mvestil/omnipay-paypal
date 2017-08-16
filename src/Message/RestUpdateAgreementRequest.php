@@ -118,6 +118,6 @@ class RestUpdateAgreementRequest extends AbstractRestRequest
      */
     public function getEndpoint()
     {
-        return parent::getEndpoint() . '/payments/billing-agreement/' . $this->getAgreementId();
+        return parent::getEndpoint() . '/payments/billing-agreements/' . $this->getAgreementId();
     }
 }
