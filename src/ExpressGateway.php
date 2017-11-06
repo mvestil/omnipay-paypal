@@ -165,4 +165,18 @@ class ExpressGateway extends ProGateway
     {
         return $this->createRequest('\Omnipay\PayPal\Message\ExpressCompleteOrderRequest', $parameters);
     }
+
+    /**
+     * Update Recurring Payments Profile using NVP API
+     *
+     * Use this call to Update the necessary params in Recurring Payments
+     *
+     * @link https://developer.paypal.com/docs/classic/api/merchant/UpdateRecurringPaymentsProfile_API_Operation_NVP/
+     * @param array $parameters
+     * @return Message\AbstractRestRequest
+     */
+    public function updateRecurringPayments(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\PayPal\Message\ExpressUpdateRecurringPaymentsProfileRequest', $parameters);
+    }
 }
